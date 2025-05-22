@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee Shop Blog</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #6f4e37;
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem 2rem;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #463015;
+      color: white;
+      z-index: 9999;
+      transition: top 0.3s ease-in-out;
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #463015;
+      padding: 1rem 2rem;
+    }
+
+    .mobile-nav a {
+      color: white;
+      padding: 0.6rem 0;
+      text-decoration: none;
+      border-bottom: 1px solid #5c4020;
+    }
+
+    .blog-container {
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    #coffee-tasting-blog {
+      max-width: 900px;
+      line-height: 1.7;
+    }
+
+    #coffee-tasting-blog img {
+      width: 5cm;
+      height: 5cm;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .tasting-step p,
+    .tasting-step ul {
+      margin-bottom: 1rem;
+    }
+
+    .tasting-step h3 {
+      background: #e0d5c4;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+
+    .tasting-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .tasting-grid img {
+      width: 5cm;
+      height: 5cm;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .cta {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-nav.show {
+        display: flex;
+      }
+
+      #coffee-tasting-blog img,
+      .tasting-grid img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div id="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <img src="https://img.freepik.com/premium-vector/coffee-bean-drink-logo-design-brown-color-vector-illustration_638875-1264.jpg" alt="Logo" />
+        Jawi Coffee Shop
+      </div>
+      <div class="nav-links">
+        <a href="menu.html">Menu</a>
+        <a href="ourstory.html">Our Story</a>
+        <a href="location.html">Locations</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="blog1.html">Blog</a>
+      </div>
+      <div class="hamburger" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="menu.html">Menu</a>
+      <a href="ourstory.html">Our Story</a>
+      <a href="location.html">Locations</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="blog1.html">Blog</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Coffee Chronicles</h1>
+    <p>Your daily dose of caffeine stories</p>
+  </header>
+
+  <!-- Blog Content -->
+  <div class="blog-container">
+    <div id="coffee-tasting-blog">
+      <h1>The Art of Coffee Tasting — What to Look For</h1>
+      <img src="https://img.freepik.com/free-photo/stylish-black-couple-sitting-cafe-drinking-coffee_1157-31787.jpg" alt="Steaming cup of coffee with cupping setup" />
+
+      <h2>Introduction</h2>
+      <p>Coffee is more than just a beverage — it's an experience...</p>
+
+      <div class="tasting-step">
+        <h3 onclick="toggleStep(this)">Step 1: Smell the Aroma</h3>
+        <p>Before even taking a sip, breathe in the aroma...</p>
+        <p><em>Tip:</em> The nose detects hundreds of scent notes...</p>
+        <img src="https://img.freepik.com/premium-photo/black-woman-smelling-coffee-house-relax-morning-routine-positive-mood-with-warm-drink-female-person-bliss-hot-beverage-home-as-aroma-chilling-thinking-thoughtful_590464-453186.jpg" alt="Smelling coffee aroma">
+      </div>
+
+      <div class="tasting-step">
+        <h3 onclick="toggleStep(this)">Step 2: Taste and Slurp</h3>
+        <p>Take a loud slurp! This spreads the coffee across your palate...</p>
+        <ul>
+          <li><strong>Sweetness:</strong> Natural sugars in the bean</li>
+          <li><strong>Acidity:</strong> Like citrus or berries — not sourness</li>
+          <li><strong>Body:</strong> The texture or weight of the coffee in your mouth</li>
+          <li><strong>Flavor:</strong> Fruity, earthy, nutty, chocolaty?</li>
+        </ul>
+        <img src="https://img.freepik.com/free-photo/close-up-hand-pouring-milk-cup_23-2148865607.jpg" alt="Barista slurping coffee">
+      </div>
+
+      <div class="tasting-step">
+        <h3 onclick="toggleStep(this)">Step 3: Identify the Flavor Notes</h3>
+        <p>Each coffee tells a story through its origin...</p>
+        <img src="https://img.freepik.com/free-photo/close-up-delicious-coffee-after-harvest_23-2151913323.jpg" alt="Coffee origins">
+      </div>
+
+      <div class="tasting-step">
+        <h3 onclick="toggleStep(this)">Step 4: The Aftertaste (Finish)</h3>
+        <p>Notice the lingering flavor once you’ve swallowed...</p>
+        <img src="https://img.freepik.com/premium-photo/young-businesswoman-standing-outside-drinking-coffee_1048944-28899838.jpg" alt="Final sip of coffee">
+      </div>
+
+      <h2>Final Thoughts</h2>
+      <p>Tasting coffee is an art that blends sensation, memory, and curiosity...</p>
+
+      <div class="cta">
+        <h2>Call-to-Action</h2>
+        <p><strong>Want to experience a guided coffee tasting?</strong><br>
+          Join us every Saturday at 10 AM for a complimentary cupping session.<br>
+          Let’s train your taste buds together!</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Coffee Chronicles. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleStep(header) {
+      let content = header.nextElementSibling;
+      while (content && content.tagName !== 'H3') {
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        content = content.nextElementSibling;
+      }
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById('mobileNav').classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>

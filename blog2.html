@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee Blog — The Art of Tasting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #fff9f5;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1511920170033-f8396924c348') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2, h3 {
+      font-family: 'Playfair Display', serif;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    img {
+  width: 5cm;
+  height: 5cm;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .cta-box {
+      background: #fef5ef;
+      border: 2px dashed #a68160;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .cta-box h3 {
+      color: #6f4e37;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #6f4e37;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The Art of Coffee Tasting</h1>
+  </header>
+
+  <main class="container">
+    <p>Coffee isn’t just a drink — it’s a ritual, a flavor journey, and a daily companion. Whether you’re a casual sipper or an aspiring connoisseur, learning how to taste coffee is a rewarding sensory experience.</p>
+
+    <h2>Step 1: Smell the Aroma</h2>
+    <p>Before tasting, take a moment to breathe in the aroma. A good coffee can reveal hints of chocolate, fruit, earthiness, or spices — all through scent alone.</p>
+    <img src="https://img.freepik.com/free-photo/portrait-man-drinking-tea_23-2151783130.jpg?uid=R198666552&ga=GA1.1.395247667.1747458314&semt=ais_hybrid&w=740" alt="Smelling coffee aroma" />
+
+    <h2>Step 2: Taste and Slurp</h2>
+    <p>Slurping spreads the coffee evenly across your tongue, allowing you to experience the full range of flavors and textures.</p>
+    <ul>
+      <li><strong>Sweetness:</strong> From natural sugars</li>
+      <li><strong>Acidity:</strong> Bright, citrusy notes</li>
+      <li><strong>Body:</strong> The mouthfeel — light, medium, or full</li>
+      <li><strong>Flavor:</strong> Fruity, nutty, chocolatey?</li>
+    </ul>
+    <img src="https://img.freepik.com/free-photo/brown-coffee-droplets-fly-around-cup-chaotic-artistic-splash_91128-4339.jpg?uid=R198666552&ga=GA1.1.395247667.1747458314&semt=ais_hybrid&w=740" alt="Slurping coffee" />
+
+    <h2>Step 3: Identify the Flavor Notes</h2>
+    <p>Good beans express their origin. You might taste the brightness of an Ethiopian roast or the caramel smoothness of a Colombian brew.</p>
+    <img src="https://img.freepik.com/premium-photo/low-angle-view-orange-fruits-basket-market_1048944-12401447.jpg?uid=R198666552&ga=GA1.1.395247667.1747458314&semt=ais_hybrid&w=740" alt="Coffee origin" />
+
+    <h2>Step 4: Notice the Finish</h2>
+    <p>The finish — or aftertaste — lingers on your palate. Is it clean and crisp? Bold and smoky? The best coffees leave a lasting impression.</p>
+    <img src="https://img.freepik.com/premium-photo/cropped-hand-person-pouriing-shoyu-sauce-bowl_1048944-23635410.jpg?uid=R198666552&ga=GA1.1.395247667.1747458314&semt=ais_hybrid&w=740" alt="Coffee aftertaste" />
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1609942732872-45a8262f48e4" alt="Cupping spoon" />
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Coffee beans" />
+      <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919" alt="Barista evaluating coffee" />
+      <img src="https://images.unsplash.com/photo-1587574293340-e3fdaef3e133" alt="Coffee notes" />
+    </div>
+
+    <div class="cta-box">
+      <h3>Want to Join a Coffee Tasting?</h3>
+      <p>Come visit our tasting room every Saturday at 10 AM. Let’s train your palate and explore flavor together. No experience needed!</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jawi Coffee Chronicles. Crafted with ☕️</p>
+  </footer>
+
+</body>
+</html>

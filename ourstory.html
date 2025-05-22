@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Story - Jawi Coffee Shop</title>
+ <style>
+    .story-header {
+  background: url('images/story-cover.jpg') center/cover no-repeat;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.story-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 60px 20px;
+  border-radius: 10px;
+}
+
+.story-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.story-overlay p {
+  font-size: 1.2rem;
+  color: #eee;
+}
+
+.our-story {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #3e2723;
+}
+
+.our-story h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.our-story p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+ </style>
+</head>
+<body>
+
+  <header class="navbar">
+       <!-- Navigation Bar -->
+<div id="navbar" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #463015;
+  color: white;
+  z-index: 9999;
+  transition: top 0.3s ease-in-out;
+">
+
+
+  <div style="display: flex; justify-content: center; align-items: center; padding: 1rem 2rem; position: relative;">
+    <div style="
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-right: 2rem;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+">
+  <img src="https://img.freepik.com/premium-vector/coffee-bean-drink-logo-design-brown-color-vector-illustration_638875-1264.jpg?uid=R198666552&ga=GA1.1.395247667.1747458314&semt=ais_hybrid&w=740" alt="Logo" style="height: 40px; width: auto;" />
+  Jawi Coffee Shop
+</div>
+
+    <div class="nav-links" style="display: flex; gap: 2rem; flex-wrap: wrap;">
+      <a href="menu.html" style="color: white; text-decoration: none;">Menu</a>
+      <a href="ourstory.html" style="color: white; text-decoration: none;">Our Story</a>
+      <a href="location.html" style="color: white; text-decoration: none;">Locations</a>
+      <a href="gallery.html" style="color: white; text-decoration: none;">Gallery</a>
+      <a href="contact.html" style="color: white; text-decoration: none;">Contact Us</a>
+      <a href="blog1.html" style="color: white; text-decoration: none;">Blog</a>
+    </div>
+    <div class="hamburger" onclick="toggleMobileMenu()" style="display: none; flex-direction: column; gap: 5px; cursor: pointer; position: absolute; right: 20px;">
+      <span style="width: 25px; height: 3px; background: white; border-radius: 2px;"></span>
+      <span style="width: 25px; height: 3px; background: white; border-radius: 2px;"></span>
+      <span style="width: 25px; height: 3px; background: white; border-radius: 2px;"></span>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav" style="display: none; flex-direction: column; background-color: #463015; padding: 1rem 2rem;">
+    <a href="menu.html" style="color: white; padding: 0.6rem 0; text-decoration: none; border-bottom: 1px solid #5c4020;">Menu</a>
+    <a href="ourstory.html" style="color: white; padding: 0.6rem 0; text-decoration: none; border-bottom: 1px solid #5c4020;">Our Story</a>
+    <a href="location.html" style="color: white; padding: 0.6rem 0; text-decoration: none; border-bottom: 1px solid #5c4020;">Locations</a>
+    <a href="gallery.html" style="color: white; padding: 0.6rem 0; text-decoration: none; border-bottom: 1px solid #5c4020;">Gallery</a>
+    <a href="contact.html" style="color: white; padding: 0.6rem 0; text-decoration: none; border-bottom: 1px solid #5c4020;">Contact Us</a>
+    <a href="blog.html" style="color: white; padding: 0.6rem 0; text-decoration: none;">Blog</a>
+  </div>
+</div>
+  </header>
+
+  <section class="story-header">
+    <div class="story-overlay">
+      <h1>Our Story</h1>
+      <p>Brewing more than coffee — brewing community, love, and culture.</p>
+    </div>
+  </section>
+
+  <section class="our-story">
+    <div class="story-content">
+      <h2>From a Single Bean to a Shared Dream</h2>
+      <p>
+        Jawi Coffee was born in the heart of Nairobi with a simple mission: to bring people together over a cup of locally sourced, perfectly brewed coffee. What started as a tiny corner shop with two passionate baristas has now grown into a cozy retreat known for its warmth, aroma, and authentic African blends.
+      </p>
+      <p>
+        Every bean tells a story. At Jawi, we work directly with small-scale farmers across East Africa to ensure that every roast supports sustainability and fair trade. Our team is made up of coffee lovers, artists, and dreamers — all working to create an experience you can feel in every sip.
+      </p>
+      <p>
+        We believe coffee isn’t just a drink — it’s a culture. A conversation starter. A daily ritual. And above all, a reason to slow down and savor life’s little moments.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Jawi Coffee Shop. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
